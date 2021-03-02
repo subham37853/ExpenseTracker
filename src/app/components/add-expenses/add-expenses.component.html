@@ -1,0 +1,7 @@
+<form (ngSubmit) = "addExpenses()">
+    <input type = "text" name = "expense" [(ngModel)]="expenses.expense" placeholder = "enter expense name"><br><br>
+    <input type = "text" name = "description" [(ngModel)]="expenses.descripstion" placeholder = "enter the description"><br><br>
+    <input type = "text" name = "amount" [(ngModel)]="expenses.amount" placeholder = "enter amount"><br><br>
+    <button type = "submit">Update Expense</button>
+    <button *ngIf="expenses.id" (click) = "deleteExpense()">Delete Expense</button> 
+</form>
